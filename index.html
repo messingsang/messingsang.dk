@@ -10,47 +10,19 @@
   <meta name="author" content="messingsang.dk">
 
 
-<script>
-function checks() {
-sslcheck();
-fbcheck();
-}
-
-
-    function sslcheck() {
-if (location.protocol === 'https:') {
-    // page is secure excellent
-    document.getElementById("sslyes1").innerHTML="https check done";
-}
-else {
-//punish the user for not using https
-document.getElementById("wholebody").innerHTML="You miserable fool you forgot to type in https://";
-}
-}
-
-function fbcheck() {
-//currently doesn't remove the dummy text. Punishing for fbclid's in the url will have to wait.
-if (location.search.includes("fbclid")) {
-document.getElementById("fbannoyance").innerHTML="Oh you came here from fb? Interesting shit! I wonder what I am going to do with that information in the future...";
-}
-else {
-document.getElementById("fbannoyance").style.display="none";
-}
-}
-</script>
+<script type="text/javascript" src="/checks.js"></script>
 
 
 </head>
 
 <body id="wholebody" onload="checks()">
 
-
+<div class="header">
 <p id="sslyes1">BIG OMINOUS WARNING IN CAPS: There has not been done an https check. Sound the alarms and queue the synth music!</p>
-<p id="fbannoyance">dummy text</p>
-
-<p>Actually relevant page content goes here</P>
+<p id="fbannoyance">dummy text for fb clicktracker detection</p>
+</div>
   
-  <p>This line of text came from github!</p>
+<p>Actually relevant page content goes here</P>
 
 <div class="footer"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br>All pages and content licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> unless specifically stated otherwise.
 <br>
