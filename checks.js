@@ -17,6 +17,8 @@ document.getElementById("wholebody").innerHTML="You miserable fool you forgot to
 
 function fbcheck() {
 //punishes the user (somehow) for using fbclid
+let q = location.search.get('fbclid');
+alert(q);
 if (location.search.includes("fbclid")) {
 document.getElementById("fbannoyance").innerHTML="Oh you came here from fb? Interesting shit! I wonder what I am going to do with that information in the future...";
 }
