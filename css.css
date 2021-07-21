@@ -27,9 +27,18 @@ a:hover{
   text-decoration: none;
 }
 a:active{
-  color:##444444;
+  color:#444444;
   text-decoration: none;
 }
+#hiddenlink {
+  color:#ffffff;
+  transition-duration: 0.6s;
+}
+
+#hiddenlink:hover {
+  color:#7777ff;
+}
+
 h1{
   font-size:3em;
 }
