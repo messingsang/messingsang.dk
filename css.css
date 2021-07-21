@@ -13,12 +13,26 @@
   color: white;
 
 }
-
+a:link {
+  color:#ccccff;
+  text-decoration: none;
+}
+a:visited{
+  color:#ccccff;
+  text-decoration: none;
+}
+a:hover{
+  color:#aaaaff;
+  text-decoration: underline;
+}
+a:active{
+  color:##444444;
+  text-decoration: underline;
+}
 
 .header {
 padding:10px;
 background-color: #55bb55;
-margin-left: 20px;
 }
 
 .row:after {
@@ -47,7 +61,7 @@ clear:both;
   float: right;
   text-align: right;
   width: 15%
-  
+
 
 }
 
