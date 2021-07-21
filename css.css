@@ -16,18 +16,19 @@
 a:link {
   color:#ccccff;
   text-decoration: none;
+  transition-duration: 0.6s;
 }
 a:visited{
   color:#ccccff;
   text-decoration: none;
 }
 a:hover{
-  color:#aaaaff;
-  text-decoration: underline;
+  color:#7777ff;
+  text-decoration: none;
 }
 a:active{
   color:##444444;
-  text-decoration: underline;
+  text-decoration: none;
 }
 h1{
   font-size:3em;
