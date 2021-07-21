@@ -45,52 +45,56 @@ p{
 .header {
 padding:10px;
 background-color: #55bb55;
-}
 
-.row:after {
-content:"";
-clear:both;
-}
-
-.left_filler{
-  float: left;
-  width: 15%;
 }
 
 
-.content {
-  float: center;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+.column.left{
+display: block;
+float: left;
+width:150px;
+padding: 20px;
+
+}
+
+.column.center {
+  display: block;
+  margin: auto;
   max-width: 600px;
-
+  padding: 20px;
 }
 
-.menu{
-  margin-right:20px;
+.column.right {
+  display:block;
   float: right;
-  text-align: right;
-  width: 15%
-
-
+  width: 150px;
+  padding: 20px;
 }
 
-.footer_all{
+.buttondivs{
+  background-color: #222222;
+}
 
+.button{
+  background-color: inherit;
+  border: none;
+  color: #bbbbbb;
+  font-size: 2em;
+  width: 150px;
+  height: 3em;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #333333;
+  color: #ffffff;
 }
 
 
-.footer{
+.footer {
 font-size: 8pt;
 text-align: center;
-margin-left: auto;
-margin-right: auto;
-width: 20%;
+margin: auto;
+max-width:470px;
 
-}
-
-.footer_l{
-}
-.footer_r{
 }
