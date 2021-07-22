@@ -1,2 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Messingsang | Classified</title>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+
+<script>
+  function countdown(count){
+  //init
+  //var count = seconds;
+  document.getElementById("counter").innerHTML = count;
+  document.getElementById("countertext").innerHTML =  "OH FUCK YOU STARTED THE COUNTDOWN";
+  document.getElementById("butt").style.display = "none";
+  //every second
+  var x = setInterval(function() {
+    //subtract from count
+    count=count-1;
+    //update counter
+    document.getElementById("counter").innerHTML = count;
+
+    if (count<=5) {
+      document.getElementById("countertext").innerHTML = "SHIT ITS ALMOST THERE!";
+    }
+    if (count<=0) {
+      clearInterval(x);
+      document.getElementById("countertext").innerHTML = "oh.";
+    }
+
+}, 1000);
+}
+</script>
+
+<div class="everything">
+<div class="column center" id="content">
 <h1>What? Everyone has secrets</h1>
-<p>I'll do something funky here later</p>
+<a href="javascript:void(0);" onclick="countdown(30)" id="butt">continue</a>
+
+<h2 id="counter">Dummy</h2>
+<h3 id="countertext">also dummy</h3>
+</div>
+</div>
+</body>
+</html>
