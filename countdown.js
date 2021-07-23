@@ -27,6 +27,7 @@ function trycountdown(time){
          setTimeout(updateTimer(), 1000);
       }
     }
+  }
   /*
       else {
       // no need to clear async
@@ -35,4 +36,5 @@ function trycountdown(time){
   else {
   //if it's already running clear the damn button/link just in case
   document.getElementById("butt").style.display = "none";
+  }
 }
