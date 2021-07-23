@@ -15,4 +15,7 @@ async function loadFromMenu(str) {
       else if (str === 'weed'){
       document.getElementById("content").innerHTML = await loadContent("cannabis.html");
       }
+      else if (str === 'supersecretshit'){
+      document.getElementById("content").innerHTML = await loadContent("supersecretpasswordentry.html");
+      }
 }
