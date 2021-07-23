@@ -17,7 +17,7 @@ function updateTimer(){
 
 function trycountdown(time){
 //is the input a positive integer?
-  if ((time > 0)&&(Number.isInteger(time)){
+  if ((time > 0)&&(Number.isInteger(time))){
     //good now init
     count=time;
     document.getElementById("counter").innerHTML = count;
