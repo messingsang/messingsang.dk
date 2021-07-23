@@ -34,12 +34,12 @@ function trycountdown(time) {
       //subtract from count
       count--;
       //update display
-      document.getElementById("counter").innerHTML = count;
+      document.getElementById("counter").innerHTML = Math.round(count);
       //additional fun
-      if (count == 5){
+      if (Math.round(count) == 5){
         document.getElementById("countertext").innerHTML =  "SHIT IT'S ALMOST THERE!";
       }
-      if (count == 0){
+      if (Math.round(count) == 0){
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
       }
       if (Math.round(count) ==-1){
