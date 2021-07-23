@@ -1,6 +1,8 @@
 var count=0;
 
 function updateTimer(){
+  //subtract from count
+  count--;
   //update display
   document.getElementById("counter").innerHTML = count;
   //additional fun
@@ -26,8 +28,6 @@ function trycountdown(time){
   
     //okay now do this shit until count reaches 0 or below
     while (count>0){
-      //subtract from count
-      count--;
       //update timer after 1000ms delay
       setTimeout(updateTimer(), 1000);
       }
