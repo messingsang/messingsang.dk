@@ -38,7 +38,7 @@ function trycountdown(time) {
       if (count == 0){
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
       }
-      if (count ==-1){
+      if (Math.round(count) ==-1){
         document.getElementById("content").innerHTML = "Sweet you found your way to some secret shit. Check back later for more interesting stuff.";
       }
     }
