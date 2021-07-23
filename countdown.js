@@ -32,7 +32,6 @@ function trycountdown(time){
       setTimeout(updateTimer(), 1000);
       }
     }
-  }
   /*
       else {
       // no need to clear async
