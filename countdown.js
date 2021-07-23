@@ -18,7 +18,7 @@ function trycountdown(time) {
  
   else {
   //if it's not a valid input clear the damn button/link just in case. WE DONT NEED NO OVERFLOWS!
-  document.getElementById("butt").style.display = "none";
+  document.getElementById("butt").innerHTML="Whatcha tryn'a do? Break my website?"
   }
   
   //okay now within that scope
