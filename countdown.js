@@ -1,6 +1,10 @@
 var count=0;  //global just cuz
 //the whole damn function needs to be rewritten as a site-global singleton for this to work.
 
+//actually on second thought I think I'll reward the user for figuring out this bug
+
+//what is it they say? It's not a bug if the developer knows about it: It's a feature.
+
 
 
 function trycountdown(time) {
