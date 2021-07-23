@@ -12,4 +12,7 @@ async function loadFromMenu(str) {
       else if (str === 'thanks'){
       document.getElementById("content").innerHTML = await loadContent("thanks.html");
       }
+      else if (str === 'weed'){
+      document.getElementById("content").innerHTML = await loadContent("cannabis.html");
+      }
 }
