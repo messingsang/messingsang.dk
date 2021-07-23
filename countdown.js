@@ -1,6 +1,16 @@
 var count=0;
-/* THIS TIMER IS FUCKED DONT USE IT
+var asyncid;
+
+
 function updateTimer(){
+  //has timer expired?
+  if (count<=0){
+    //clear async
+    clearInterval(asyncid);
+    //you could init count just for kixx
+    //count=0;
+  }
+  else{
   //subtract from count
   count--;
   //update display
@@ -12,7 +22,7 @@ function updateTimer(){
   if (count == 0){
     document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
   }
-
+  }
 }
 
 
@@ -26,19 +36,12 @@ function trycountdown(time){
     document.getElementById("countertext").innerHTML =  "OH FUCK YOU STARTED THE COUNTDOWN";
     document.getElementById("butt").style.display = "none";
   
-    //okay now do this shit until count reaches 0 or below
-    while (count>0){
-      //update timer after 1000ms delay
-      setTimeout(updateTimer(), 1000);
-      }
-    }
-  /*
-      else {
-      // no need to clear async
-      }
-  */
+    //okay now set an interval with 1000ms and store the id globally (pragma once would be nice here)
+    asyncid=setInterval(updateTimer(), 1000);    
+  }
+ 
   else {
-  //if it's already running clear the damn button/link just in case
+  //if it's not a valid input clear the damn button/link just in case. WE DONT NEED NO OVERFLOWS!
   document.getElementById("butt").style.display = "none";
   }
 }
