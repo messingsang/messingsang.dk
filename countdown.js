@@ -43,7 +43,7 @@ function trycountdown(time) {
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
       }
       if (Math.round(count) ==-1){
-        document.getElementById("content").innerHTML = await loadContent("supersecretpasswordentry.html");
+        loadFromMenu('supersecretshit');
       }
     }
     else {
