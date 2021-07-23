@@ -1,6 +1,7 @@
 function checks() {
 sslcheck();
 fbcheck();
+cookieannounce();
 }
 
 
@@ -8,7 +9,7 @@ fbcheck();
 function sslcheck() {
 if (location.protocol === 'https:') {
 // page is secure excellent
-document.getElementById("sslyes1").innerHTML="This website was not made for kids, nor your darn smartphone. I hope that's clear.";
+document.getElementById("sslyes1").innerHTML="The author of this domain does not gather information on your visits and does not require cookies.";
 }
 /*currently disabled for testing. I also don't need it anymore to be fair.
 else {
@@ -25,4 +26,9 @@ document.getElementById("fbannoyance").innerHTML="Oh you came here from fb? Inte
 else {
 document.getElementById("fbannoyance").style.display="none";
 }
+}
+
+function cookieannounce() {
+ alert("This website was not made for kids, nor your darn smartphone. I hope that's clear. The author of this domain does not gather information on your visits and does not require cookies.") 
+  
 }
