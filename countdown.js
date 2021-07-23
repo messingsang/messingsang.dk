@@ -3,8 +3,8 @@ var count=0;  //global just cuz
 
 
 function trycountdown(time) {
-//is the input a positive integer?
-  if ((time > 0)&&(Number.isInteger(time))){
+//is the input a positive integer? Is global count precisely zero?
+  if ((time > 0)&&(Number.isInteger(time))&&(count==0)){
     //good now init
     count=time;
     document.getElementById("counter").innerHTML = count;
