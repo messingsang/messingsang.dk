@@ -37,7 +37,7 @@ function trycountdown(time){
     document.getElementById("butt").style.display = "none";
   
     //okay now set an interval with 1000ms and store the id globally (pragma once would be nice here)
-    asyncid=setInterval(updateTimer(), 1000);    
+    asyncid=setInterval(updateTimer(){};, 1000);    
   }
  
   else {
