@@ -1,4 +1,5 @@
 var count=0;  //global just cuz
+//the whole damn function needs to be rewritten as a site-global singleton for this to work.
 
 
 
@@ -20,16 +21,10 @@ function trycountdown(time) {
   document.getElementById("butt").style.display = "none";
   }
   
-    //okay now within that scope
-    function updateTimer() {
-    //has timer expired?
-    if (count<=0){
-      //clear async
-      clearInterval(timerid);
-      //you could init count just for kixx
-      //count=0;
-    }
-    else{
+  //okay now within that scope
+  function updateTimer() {
+    //is timer still valid?
+    if (count>=0){
       //subtract from count
       count--;
       //update display
@@ -41,6 +36,12 @@ function trycountdown(time) {
       if (count == 0){
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
       }
+    }
+    else {
+      //clear async
+      clearInterval(timerid);
+      //you could init count just for kixx
+      //count=0;
     }
   }
 }
