@@ -24,7 +24,7 @@ function trycountdown(time) {
   //okay now within that scope
   function updateTimer() {
     //is timer still valid?
-    if (count>=0){
+    if (count>0){
       //subtract from count
       count--;
       //update display
