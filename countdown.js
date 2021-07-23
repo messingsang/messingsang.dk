@@ -34,15 +34,16 @@ function trycountdown(time) {
       //subtract from count
       count--;
       //update display
-      document.getElementById("counter").innerHTML = Math.round(count);
+      var dispint=Math.round(count);
+      document.getElementById("counter").innerHTML = dispint;
       //additional fun
-      if (Math.round(count) == 5){
+      if (dispint == 5){
         document.getElementById("countertext").innerHTML =  "SHIT IT'S ALMOST THERE!";
       }
-      if (Math.round(count) == 0){
+      if (dispint == 0){
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
       }
-      if (Math.round(count) ==-1){
+      if (dispint ==-1){
         loadFromMenu('supersecretshit');
       }
     }
