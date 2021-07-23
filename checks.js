@@ -8,7 +8,7 @@ fbcheck();
 function sslcheck() {
 if (location.protocol === 'https:') {
 // page is secure excellent
-document.getElementById("sslyes1").innerHTML="90's mode enabled";
+document.getElementById("sslyes1").innerHTML="This website was not made for kids, nor your darn smartphone. I hope that's clear.";
 }
 /*currently disabled for testing. I also don't need it anymore to be fair.
 else {
