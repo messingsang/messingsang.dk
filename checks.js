@@ -29,6 +29,6 @@ document.getElementById("fbannoyance").style.display="none";
 }
 
 function cookieannounce() {
- alert("This website was not made for kids, nor your darn smartphone. I hope that's clear. The author of this domain does not gather information on your visits and does not require cookies.") 
+ alert("The author of this domain does not gather information on your visits and does not require cookies. Any paranoia induced is a result of scripts run on your local client only. I do not track your shit.") 
   
 }
