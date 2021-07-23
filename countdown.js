@@ -1,5 +1,5 @@
 var count=0;
-
+/* THIS TIMER IS FUCKED DONT USE IT
 function updateTimer(){
   //subtract from count
   count--;
