@@ -88,7 +88,8 @@ padding: 20px;
 }
 
 .menucontainer{
-transition: display 2s; 
+  display: block;
+  transition: all 2s; 
 }
 
 .buttondivs{
