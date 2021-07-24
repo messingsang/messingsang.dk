@@ -87,6 +87,10 @@ padding: 20px;
   padding: 20px;
 }
 
+.menucontainer{
+transition: display 2s; 
+}
+
 .buttondivs{
   background-color: #222222;
 }
