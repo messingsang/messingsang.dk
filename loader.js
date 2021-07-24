@@ -24,7 +24,7 @@ var menu_on=true;
 function toggle_menu_collapse() {
   if (menu_on===true){
     //change height of buttondivs to 0
-    document.getElementsByClassName("buttondivs").style.height=0;
+    document.getElementsByClassName("buttondivs").style.height="0px";
     document.getElementById("menucontainer").style.display = "none";
     menu_on=false;
   }
