@@ -23,11 +23,15 @@ async function loadFromMenu(str) {
 var menu_on=true;
 function toggle_menu_collapse() {
   if (menu_on===true){
+    //change height of buttondivs to 0
+    document.getElementsByClassName("buttondivs").style.maxHeight=0;
+    document.getElementById("menucontainer").style.display = "none";
     menu_on=false;
-  document.getElementById("menucontainer").style.display = "none";  
   }
   else if (menu_on===false){
-  document.getElementById("menucontainer").style.display = "block";
+    //change height of buttondivs to undefined
+    document.getElementsByClassName("buttondivs").style.maxHeight=null;
+    document.getElementById("menucontainer").style.display = "block";
     menu_on=true;
   }
   
