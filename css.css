@@ -89,28 +89,46 @@ padding: 20px;
 
 .menucontainer{
   display: block;
-  transition: all 2s; 
+  transition: all 2s;
+}
+
+.collapser{
+  display: block;
+  background-color: #444444;
+  border:none;
+  color: #bbbbbb;
+  font-size: 20pt;
+  width: 150px;
+  height: 70px;
+  transition: all 0.6s;
+}
+.collapser:hover {
+  background-color:#555555;
+  color: #ffffff;
 }
 
 .buttondivs{
   background-color: #222222;
-}
-
-.button{
-  background-color: inherit;
   border: none;
   color: #bbbbbb;
   font-size: 1em;
   width: 150px;
-  height: 4em;  /*I KNOW THIS SHIT I USED TO DO LATEX*/
-  transition-duration: 0.6s; /*short fade because we're super patient*/
+  height: 70px;
+  transition: all 0.6s; /*short fade because we're super patient*/
 }
 
-.button:hover {
+.buttondivs:hover {
   background-color: #333333;
   color: #ffffff;
 }
 
+
+.buttontext{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
 
 .footer {
 font-size: 0.65em;
