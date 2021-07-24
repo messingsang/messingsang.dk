@@ -19,3 +19,16 @@ async function loadFromMenu(str) {
       document.getElementById("content").innerHTML = await loadContent("supersecretpasswordentry.html");
       }
 }
+
+var menu_on=true;
+function toggle_menu_collapse() {
+  if (menu_on===true){
+    menu_on=false;
+  document.getElementById("menucontainer").style.display = "none";  
+  }
+  else if (menu_on===false){
+  document.getElementById("menucontainer").style.display = "block";
+    menu_on=true;
+  }
+  
+}
