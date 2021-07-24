@@ -24,13 +24,13 @@ var menu_on=true;
 function toggle_menu_collapse() {
   if (menu_on===true){
     //change height of buttondivs to 0
-    document.getElementsByClassName("buttondivs").style.maxHeight=0;
+    document.getElementsByClassName("buttondivs").style.height=0;
     document.getElementById("menucontainer").style.display = "none";
     menu_on=false;
   }
   else if (menu_on===false){
     //change height of buttondivs to undefined
-    document.getElementsByClassName("buttondivs").style.maxHeight=null;
+    document.getElementsByClassName("buttondivs").style.height=null;
     document.getElementById("menucontainer").style.display = "block";
     menu_on=true;
   }
