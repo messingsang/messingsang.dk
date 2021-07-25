@@ -31,8 +31,9 @@ async function loadFromMenu(str) {
       }
       else if (str=='ressource'){
         document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
+        bgchange('none');
         overlaychange('reddish');
-        document.getElementById("sslyes1").innerHTML = "Oh fuck! You've been infected! Smoke some weed to cure it!";
+        document.getElementById("sslyes1").innerHTML = "Oh fuck! You've been infected with Dannebro! Smoke some weed to cure it!";
         infected=true;
         menu_location='ressource';
       }
