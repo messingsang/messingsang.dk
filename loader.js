@@ -3,20 +3,14 @@ async function loadContent(url) {
 }
 
 async function loadFromMenu(str) {
-      if (str === 'about'){
-      document.getElementById("content").innerHTML = await loadContent("about.html");
-      }
-      else if (str === 'classified'){
-      document.getElementById("content").innerHTML = await loadContent("classified.html");
-      }
-      else if (str === 'thanks'){
-      document.getElementById("content").innerHTML = await loadContent("thanks.html");
-      }
-      else if (str === 'weed'){
+      if (str === 'weed'){
       document.getElementById("content").innerHTML = await loadContent("cannabis.html");
       }
       else if (str === 'supersecretshit'){
       document.getElementById("content").innerHTML = await loadContent("supersecretpasswordentry.html");
+      }
+      else if (str==='about'||'faq'||'classified'||'thanks'){
+        document.getElementById("content").innerHTML = await loadContent(str + ".html");
       }
 }
 
