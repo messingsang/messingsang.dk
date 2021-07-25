@@ -15,18 +15,18 @@ function trycountdown(time) {
     document.getElementById("counter").innerHTML = count;
     document.getElementById("countertext").innerHTML =  "OH FUCK YOU STARTED THE COUNTDOWN";
     document.getElementById("butt").style.display = "none";
-  
+
     //okay now set an interval with 1000ms and store the id globally (pragma once would be nice here)
-    var timerid=setInterval(updateTimer, 1000);    
+    var timerid=setInterval(updateTimer, 1000);
   }
- 
+
   else {
   //if it's not a valid input clear the damn button/link just in case. WE DONT NEED NO OVERFLOWS!
     document.getElementById("butt").innerHTML="Whatcha tryn'a do? Break my website?";
     //reward the user with an extra milisecond
     count=count+0.001;
   }
-  
+
   //okay now within that scope
   function updateTimer() {
     //is timer still valid?
@@ -35,17 +35,25 @@ function trycountdown(time) {
       count--;
       //update display
       var dispint=Math.round(count);
+      try {
       document.getElementById("counter").innerHTML = dispint;
-      //additional fun
+
       if (dispint == 5){
         document.getElementById("countertext").innerHTML =  "SHIT IT'S ALMOST THERE!";
-      }
+        }
       if (dispint == 0){
         document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
-      }
+        }
       if (dispint ==-1){
         loadFromMenu('supersecretshit');
+        }
       }
+      catch(error){
+        console.log("Oh shit the timer is still running! Better go check on it.");
+      }
+
+      //additional fun
+
     }
     else {
       //clear async
