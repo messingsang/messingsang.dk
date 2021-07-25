@@ -21,6 +21,7 @@ async function loadFromMenu(str) {
 
 
 function bgchange(str){
-  document.getElementById("everything").style["background-image"] = "images/"+ str + ".jpg";
+  console.log("I tried changing the bg dave");
+  document.getElementById("everything").style["background-image"] = ("images/"+ str + ".jpg");
 
 }
