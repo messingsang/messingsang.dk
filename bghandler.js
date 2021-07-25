@@ -13,3 +13,16 @@ function bgchange(str){
   }
 
 }
+
+
+function overlaychange(str){
+  if (str=='normal'){
+  document.getElementById("bgoverlay").style["background-color"] = "rgba(0,0,0,0.7)";
+  }
+  if (str=='reddish'){
+    document.getElementById("bgoverlay").style["background-color"] = "rgba(100,0,0,0.7)";
+  }
+  if (str=='off'){
+    document.getElementById("bgoverlay").style["background-color"] = "rgba(0,0,0,0)";
+  }
+}
