@@ -32,7 +32,7 @@ async function loadFromMenu(str) {
         }
         menu_location='supersecretshit';
       }
-      else if (str=='about'||str==='questions'||str==='classified'||str==='thanks'){
+      else if (str=='about'||str==='questions'||str==='classified'||str==='thanks'||str==='aboutwebsite'){
         bgchange(str);
         document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
         menu_location='other';
