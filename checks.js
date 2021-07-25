@@ -4,6 +4,7 @@ fbcheck();
 cookieannounce();
 //close the darn menu on load just to see if we can make someones phone explode
 toggle_menu_collapse('main');
+bgchange('none');
 }
 
 
