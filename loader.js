@@ -4,6 +4,7 @@ async function preloadContent(url) {
 
 var menu_location='lander';
 var infected=false;
+var cured=false;
 async function loadFromMenu(str) {
       //first we blackout by default
       //bgchange('none'); on second thought let's not blackout by default
@@ -15,13 +16,20 @@ async function loadFromMenu(str) {
         menu_location='weed';
         if (infected==true){
           overlaychange('normal');
+          document.getElementById("statusbox").style.color="#225522"
           document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
+          cured=true;
           infected=false;
         }
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
+        if (cured=true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
+        }
+        else{
+        document.getElementById("content").innerHTML = "One cannot be cured unless they are infected first."
+        }
         menu_location='supersecretshit';
       }
       else if (str=='about'||str==='questions'||str==='classified'||str==='thanks'){
@@ -34,6 +42,7 @@ async function loadFromMenu(str) {
         bgchange('none');
         overlaychange('reddish');
         document.getElementById("sslyes1").innerHTML = "Oh fuck! You've been infected with Dannebro! Smoke some weed to cure it!";
+        cured=false;
         infected=true;
         menu_location='ressource';
       }
