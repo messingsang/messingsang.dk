@@ -11,25 +11,25 @@ async function loadFromMenu(str) {
       overlaychange('none');
       }
       //then firgure out what we wanna do
-      if (str === 'weed'){
+      if (str == 'weed'){
         bgchange('weed');
         document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
         location='weed';
       }
-      else if (str === 'supersecretshit'){
+      else if (str == 'supersecretshit'){
         bgchange('none');
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         location='supersecretshit';
       }
-      else if (str==='about'||str==='questions'||str==='classified'||str==='thanks'){
+      else if (str=='about'||str==='questions'||str==='classified'||str==='thanks'){
         bgchange(str);
         document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
         location='other';
       }
-      else if (str==='ressource'){
-        location='ressource';
-        overlaychange('reddish');
+      else if (str=='ressource'){
         document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
+        overlaychange('reddish');
+        location='ressource';
       }
       else{
         console.log("something weird is going on in the load function");
