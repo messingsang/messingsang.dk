@@ -5,17 +5,20 @@ async function preloadContent(url) {
 
 async function loadFromMenu(str) {
       //first we blackout by default
-      bgchange('none');
+      //bgchange('none'); on second thought let's not blackout by default
+      //it is a silly thing to do
 
       //then firgure out what we wanna do
       if (str === 'weed'){
-      bgchange('weed');
-      document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
+        bgchange('weed');
+        document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
       }
       else if (str === 'supersecretshit'){
-      document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
+        bgchange('none');
+        document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
       }
       else if (str==='about'||str==='questions'||str==='classified'||str==='thanks'){
+        bgchange(str);
         document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
       }
       else{
