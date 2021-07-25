@@ -8,7 +8,7 @@ async function preloadImage(url){
 
 async function loadFromMenu(str) {
       if (str === 'weed'){
-      document.getElementById("everything").style["background-image"] = await preloadImage("images/weed.jpg");
+      document.getElementById("everything").style["background-image"] = "images/weed.jpg";
       document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
       }
       else if (str === 'supersecretshit'){
