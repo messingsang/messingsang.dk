@@ -16,7 +16,7 @@ async function loadFromMenu(str) {
         menu_location='weed';
         if (infected==true){
           overlaychange('normal');
-          document.getElementById("statusbox").style.color="#225522"
+          document.getElementById("statusbox").style.["background-color"]="#225522"
           document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
           cured=true;
           infected=false;
