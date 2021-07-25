@@ -21,27 +21,28 @@ async function loadFromMenu(str) {
 }
 
 var menu_on=true;
-function toggle_menu_collapse() {
-  if (menu_on===true){
-    //grab array of buttondivs
-    var bdvs=document.getElementsByClassName("buttondivs");
+var about_submenu_on=true;
+function toggle_menu_collapse(str) {
 
+  if (str==='main'&&menu_on===true){
+    //grab array of buttondivs
+    var bdvs=document.getElementsByClassName("buttondivs l1");
     //change height of all buttondivs to 0
     for(let i=0; i<bdvs.length; i++) {
     bdvs[i].style["pointerEvents"] = "none";
     bdvs[i].style["height"] = "0px";
     bdvs[i].style["opacity"] = "0";
     }
+    //if any submenus are on close em
+    if (about_submenu_on==true) {
+      toggle_submenu_collapse('about');
+    }
 
-    //document.getElementById("menucontainer").style.display = "none";
     menu_on=false;
 
   }
-
-  else if (menu_on===false){
-
-    var bdvs=document.getElementsByClassName("buttondivs");
-
+  else if (str==='main'&&menu_on===false){
+    var bdvs=document.getElementsByClassName("buttondivs l1");
     //change height of all buttondivs back to 70
     for(let i=0; i<bdvs.length; i++) {
     bdvs[i].style["pointerEvents"] = "auto";
@@ -50,5 +51,33 @@ function toggle_menu_collapse() {
     }
     //document.getElementById("menucontainer").style.display = "block";
     menu_on=true;
+  }
+}
+
+function toggle_submenu_collapse(str){
+    if (str==='about'&&about_submenu_on===true){
+    //grab array of buttondivs
+    var bdvs=document.getElementsByClassName("buttondivs l2");
+    //change height of all buttondivs to 0
+    for(let i=0; i<bdvs.length; i++) {
+    bdvs[i].style.pointerEvents = "none";
+    bdvs[i].style.height = "0px";
+    bdvs[i].style.opacity = "0";
+    bdvs[i].style.border = "none";
+    }
+    //document.getElementById("menucontainer").style.display = "none";
+    about_submenu_on=false;
+  }
+  else if (str==='about'&&about_submenu_on===false){
+    var bdvs=document.getElementsByClassName("buttondivs l2");
+    //change height of all the right divs back to 50
+    for(let i=0; i<bdvs.length; i++) {
+    bdvs[i].style.pointerEvents = "auto";
+    bdvs[i].style.height = "50px";
+    bdvs[i].style.opacity = "1";
+    bdvs[i].style.border = "2px solid black";
+    }
+    //document.getElementById("menucontainer").style.display = "block";
+    about_submenu_on=true;
   }
 }
