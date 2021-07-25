@@ -7,7 +7,7 @@ async function loadFromMenu(str) {
       //first we blackout by default
       //bgchange('none'); on second thought let's not blackout by default
       //it is a silly thing to do
-      if (location=='ressource')&&!(str=='ressource'){
+      if (location=='ressource'&&!str=='ressource'){
       overlaychange('none');
       }
       //then firgure out what we wanna do
