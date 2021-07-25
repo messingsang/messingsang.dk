@@ -11,7 +11,7 @@
   overflow: auto;
   background-image: none;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-color: #000000;
   color: #ffffff;
 }
