@@ -2,6 +2,8 @@ function checks() {
 sslcheck();
 fbcheck();
 cookieannounce();
+//close the darn menu on load just to see if we can make someones phone explode
+toggle_menu_collapse('main');
 }
 
 
@@ -29,6 +31,6 @@ document.getElementById("fbannoyance").style.display="none";
 }
 
 function cookieannounce() {
- alert("The author of this domain does not gather information on your visits and does not require cookies. Any paranoia induced is a result of scripts run on your local client only. I do not track your shit.") 
-  
+ alert("The author of this domain does not gather information on your visits and does not require cookies. Any paranoia induced is a result of scripts run on your local client only. I do not track your shit.")
+
 }
