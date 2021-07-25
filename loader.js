@@ -13,7 +13,7 @@ async function loadFromMenu(str) {
         bgchange('weed');
         document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
         menu_location='weed';
-        if (infected==true;){
+        if (infected==true){
           overlaychange('normal');
           document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
           infected=false;
