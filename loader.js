@@ -3,18 +3,21 @@ async function preloadContent(url) {
 }
 
 var menu_location='lander';
+var infected=false;
 async function loadFromMenu(str) {
       //first we blackout by default
       //bgchange('none'); on second thought let's not blackout by default
       //it is a silly thing to do
-      if (menu_location=='ressource'&&!str=='ressource'){
-      overlaychange('none');
-      }
       //then firgure out what we wanna do
       if (str == 'weed'){
         bgchange('weed');
         document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
         menu_location='weed';
+        if (infected==true;){
+          overlaychange('normal');
+          document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
+          infected=false;
+        }
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
@@ -29,6 +32,8 @@ async function loadFromMenu(str) {
       else if (str=='ressource'){
         document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
         overlaychange('reddish');
+        document.getElementById("sslyes1").innerHTML = "Oh fuck! You've been infected! Smoke some weed to cure it!";
+        infected=true;
         menu_location='ressource';
       }
       else{
