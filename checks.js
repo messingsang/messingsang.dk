@@ -32,6 +32,6 @@ document.getElementById("fbannoyance").style.display="none";
 }
 
 function cookieannounce() {
- alert("The author of this domain does not gather information on your visits and does not require cookies. Any paranoia induced is a result of scripts run on your local client only. I do not track your shit.")
+ alert("The author of this domain does not gather information on your visits and does not require cookies. Any paranoia induced is a result of scripts run on your local client only. I do not track your shit. If you are under 21 please go away.")
 
 }
