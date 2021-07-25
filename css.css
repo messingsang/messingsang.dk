@@ -9,10 +9,29 @@
   bottom: 0;
   right: 0;
   overflow: auto;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: auto;
   background-color: #000000;
   color: #ffffff;
+}
+
+
+#bgoverlay{
+  background-image: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  /*  youwantitdarker.mp3  */
+  background-color: rgba(0,0,0,0.7);
 
 }
+
+
+
 a:link {
   color:#ccccff;
   text-decoration: none;
@@ -66,9 +85,9 @@ padding: 20px;
 }
 
 .column.left{
-display: block;
+display: none;
 float: left;
-width:150px;
+width:0px;
 padding: 20px;
 
 }
@@ -78,6 +97,10 @@ padding: 20px;
   margin: auto;
   max-width: 600px;
   padding: 20px;
+}
+
+#content{
+
 }
 
 .column.right {

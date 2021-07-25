@@ -4,13 +4,14 @@ async function loadContent(url) {
 
 async function loadFromMenu(str) {
       if (str === 'weed'){
-      document.getElementById("content").innerHTML = await loadContent("cannabis.html");
+      document.getElementById("content").innerHTML = await loadContent("/content_html/cannabis.html");
+      document.getElementById("")
       }
       else if (str === 'supersecretshit'){
-      document.getElementById("content").innerHTML = await loadContent("supersecretpasswordentry.html");
+      document.getElementById("content").innerHTML = await loadContent("/content_html/supersecretpasswordentry.html");
       }
       else if (str==='about'||str==='questions'||str==='classified'||str==='thanks'){
-        document.getElementById("content").innerHTML = await loadContent(str + ".html");
+        document.getElementById("content").innerHTML = await loadContent("/content_html/" str + ".html");
       }
       else{
         console.log("something weird is going on in the load function");
