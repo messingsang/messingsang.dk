@@ -24,7 +24,7 @@ async function loadFromMenu(str) {
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
-        if (cured=true){
+        if (cured==true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         }
         else{
