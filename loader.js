@@ -1,9 +1,6 @@
 async function preloadContent(url) {
   return await (await fetch(url)).text();
 }
-async function preloadImage(url){
-  return await (await fetch(url));
-}
 
 
 async function loadFromMenu(str) {
@@ -20,4 +17,10 @@ async function loadFromMenu(str) {
       else{
         console.log("something weird is going on in the load function");
       }
+}
+
+
+function bgchange(str){
+  document.getElementById("everything").style["background-image"] = "images/"+ str + ".jpg";
+
 }
