@@ -4,8 +4,12 @@ async function preloadContent(url) {
 
 
 async function loadFromMenu(str) {
+      //first we blackout by default
+      bgchange('none');
+
+      //then firgure out what we wanna do
       if (str === 'weed'){
-      //document.getElementById("everything").style["background-image"] = "images/weed.jpg";
+      bgchange('weed');
       document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
       }
       else if (str === 'supersecretshit'){
@@ -17,11 +21,4 @@ async function loadFromMenu(str) {
       else{
         console.log("something weird is going on in the load function");
       }
-}
-
-
-function bgchange(str){
-  console.log("I tried changing the bg dave");
-  document.getElementById("everything").style["background-image"] = ("images/"+ str + ".jpg");
-
 }
