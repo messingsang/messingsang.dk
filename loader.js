@@ -41,6 +41,7 @@ async function loadFromMenu(str) {
         document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
         bgchange('none');
         overlaychange('reddish');
+        document.getElementById("statusbox").style["background-color"]="#552222";
         document.getElementById("sslyes1").innerHTML = "Oh fuck! You've been infected with Dannebro! Smoke some weed to cure it!";
         cured=false;
         infected=true;
