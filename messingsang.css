@@ -76,29 +76,31 @@ p{
   font-size:1em;
 }
 
-.header {
-margin:auto;
-}
+
 
 #statusbox {
+position:absolute;
+top:0;
+left:0;
 background-color: #222255;
 text-align: left;
-margin-left: auto;
-margin-right: auto;
 width:max-content;
 max-width: 250px;
-padding: 20px;
-z-index:5;
+margin-left: 20px;
+margin-right: 20px;
+padding:20px;
+z-index:1;
 }
 
 .column.left{
 display: none;
 float: left;
 width:0px;
-z-index:2;
+z-index:1;
 }
 
 .column.center {
+  margin-top: 120px;
 padding: 20px;
 width: 100%;
 z-index: 1;
