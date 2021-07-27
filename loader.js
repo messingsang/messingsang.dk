@@ -29,6 +29,7 @@ async function loadFromMenu(str) {
         }
         else{
         document.getElementById("content").innerHTML = "All rules must be followed at the same time."
+        count=0;
         }
         menu_location='supersecretshit';
       }
