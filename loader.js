@@ -34,7 +34,7 @@ async function loadFromMenu(str) {
       }
       /*I donno what on Earth I was thinking when I wrote This
       but any additional content needs to be added here*/
-      else if (str=='music'||str=='humor'||str=='about'||str=='questions'||str=='classified'||str=='thanks'||str=='aboutwebsite'){
+      else if (str=='youwerenew'||str=='music'||str=='humor'||str=='about'||str=='questions'||str=='classified'||str=='thanks'||str=='aboutwebsite'){
         bgchange(str);
         document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
         menu_location='other';
