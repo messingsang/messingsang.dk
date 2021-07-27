@@ -24,11 +24,11 @@ async function loadFromMenu(str) {
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
-        if (cured==true){
+        if (cured==true&&is_robot==true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         }
         else{
-        document.getElementById("content").innerHTML = "One cannot be cured unless they are infected first."
+        document.getElementById("content").innerHTML = "All rules must be followed at the same time."
         }
         menu_location='supersecretshit';
       }
