@@ -14,7 +14,12 @@
   background-size: cover;
   background-color: #000000;
   color: #ffffff;
+<<<<<<< Updated upstream:css.css
   transition: background 3s;
+=======
+  transition: all 3s;
+  z-index: -2;
+>>>>>>> Stashed changes:messingsang.css
 }
 
 
@@ -32,7 +37,9 @@
 
 
 }
-
+#hidden {
+  display:none;
+}
 
 
 a:link {

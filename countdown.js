@@ -42,7 +42,7 @@ function trycountdown(time) {
         document.getElementById("countertext").innerHTML =  "SHIT IT'S ALMOST THERE!";
         }
       if (dispint == 0){
-        document.getElementById("countertext").innerHTML =  "Oh. I guess this isn't implemented yet.";
+        document.getElementById("hidden").style.display="inline";
         }
       if (dispint ==-1){
         loadFromMenu('supersecretshit');
