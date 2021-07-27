@@ -24,12 +24,12 @@ async function loadFromMenu(str) {
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
+        count=0;
         if (cured==true&&is_robot==true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         }
         else{
         document.getElementById("content").innerHTML = "All rules must be followed at the same time."
-        count=0;
         }
         menu_location='supersecretshit';
       }
