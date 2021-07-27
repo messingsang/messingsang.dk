@@ -5,6 +5,7 @@ async function preloadContent(url) {
 var menu_location='lander';
 var infected=false;
 var cured=false;
+var is_robot=false;
 async function loadFromMenu(str) {
       //first we blackout by default
       //bgchange('none'); on second thought let's not blackout by default
@@ -52,4 +53,15 @@ async function loadFromMenu(str) {
       else{
         console.log("something weird is going on in the load function");
       }
+}
+
+function becomerobot(){
+console.log("user became robot");
+if (is_robot==true){
+  document.getElementById("captcha").innerHTML="You are already classified as a robot.";
+}
+else {
+is_robot=true;
+document.getElementById("captcha").innerHTML="Once a robot, always a robot.";
+}
 }
