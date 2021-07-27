@@ -14,17 +14,9 @@
   background-size: cover;
   background-color: #000000;
   color: #ffffff;
-<<<<<<<< HEAD:messingsang.css
-  transition-duration: 3s;
-  z-index: -2;
-========
-<<<<<<< Updated upstream:css.css
-  transition: background 3s;
-=======
   transition: all 3s;
   z-index: -2;
->>>>>>> Stashed changes:messingsang.css
->>>>>>>> main:css.css
+
 }
 
 
