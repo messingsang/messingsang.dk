@@ -9,7 +9,7 @@ function becomerobot(){
     document.getElementById("captcha").innerHTML="You are already classified as a robot.";
   }
   else {
-  is_robot=true;
+  gamehandler('robot');
   document.getElementById("captcha").innerHTML="Once a robot, always a robot.";
   }
 }
@@ -41,6 +41,11 @@ function gamehandler(str){
          document.getElementById("statusbox").style["background-color"]="#cccccc";
          document.getElementById("sslyes1").innerHTML = "Super Secret Shit Unlocked!";
        }
+    break;
+    case 'robot':
+      document.getElementById("statusbox").style["background-color"]="#888888";
+      document.getElementById("sslyes1").innerHTML = "The best memories are the ones that last";
+      is_robot=true;
     break;
     default:
   }
