@@ -1,8 +1,10 @@
 var menu_on=true;
 var about_submenu_on=true;
-function toggle_menu_collapse(str) {
+var menu_location='lander';
 
-  if (str==='main'&&menu_on===true){
+function toggle_menu_collapse() {
+
+  if (menu_on===true){
     //grab array of buttondivs
     var bdvs=document.getElementsByClassName("menu_buttondivs_l1");
 
@@ -17,17 +19,11 @@ function toggle_menu_collapse(str) {
       toggle_submenu_collapse();
     }
 
-    //unreserve menucontainer
-    //document.getElementById("menucontainer").style.height="0px";
-    //make sure we know globally the menu is off
     menu_on=false;
 
   }
-  else if (str==='main'&&menu_on===false){
+  else if (menu_on===false){
     var bdvs=document.getElementsByClassName("menu_buttondivs_l1");
-    //reserve some space with the menucontainer immediately
-    //document.getElementById("menucontainer").style.height=(74*bdvs.length+"px");
-    //change height of all buttondivs back to 70
     for(let i=0; i<bdvs.length; i++) {
     bdvs[i].style["pointerEvents"] = "auto";
     bdvs[i].style["height"] = "70px";
@@ -58,3 +54,75 @@ function toggle_submenu_collapse(){
     about_submenu_on=true;
   }
 }
+
+async function preloadContent(url) {
+  return await (await fetch(url)).text();
+}
+
+
+async function loadFromMenu(str){
+  switch(str){
+    case 'weed':
+      bgchange('weed');
+      gamehandler('weed');
+      document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
+      break;
+    case 'supersecretshit':
+    gamehandler('supersecretshit');
+      bgchange('none');
+      count=0;
+      if (shitunlocked=true){
+        document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
+        menu_location='supersecretshit';
+      }
+      break;
+    default:
+      bgchange(str);
+      gamehandler(str);
+      document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
+      menu_location=str;
+  }
+}
+
+
+
+
+/*
+async function loadFromMenuDeprecated(str) {
+      if (str == 'weed'){
+        bgchange('weed');
+        document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
+        menu_location='weed';
+        if (infected==true){
+          overlaychange('normal');
+          document.getElementById("statusbox").style["background-color"]="#225522"
+          document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
+          cured=true;
+          infected=false;
+        }
+      }
+      else if (str == 'supersecretshit'){
+        bgchange('none');
+        count=0;
+        if (cured==true&&is_robot==true){
+        document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
+        }
+        else{
+        document.getElementById("content").innerHTML = "All rules must be followed at the same time."
+        }
+        menu_location='supersecretshit';
+      }
+      else if (str=='youwerenew'||str=='music'||str=='humor'||str=='about'||str=='questions'||str=='classified'||str=='thanks'||str=='aboutwebsite'){
+        bgchange(str);
+        document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
+        menu_location='other';
+      }
+      else if (str=='ressource'){
+        document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
+
+        menu_location='ressource';
+      }
+      else{
+        console.log("something weird is going on in the load function");
+      }
+}*/
