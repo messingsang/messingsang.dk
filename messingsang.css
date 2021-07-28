@@ -64,25 +64,33 @@ a:active{
 
 #header{
   position: relative;
-  max-width: 1000px;
-  height:250px;
+  z-index: 20;
   margin-left: auto;
   margin-right: auto;
-  z-index: 20;
+  max-width: 1080px;
 }
 
 #statusbox {
-position:relative;
+position:absolute;
+top:20px;
+left:20px;
 background-color: #222255;
 text-align: left;
 float: left;
 width:max-content;
 height:max-content;
 max-width: 250px;
-margin-left: 20px;
 padding:20px;
 z-index:1;
 }
+
+#header_spacer{
+     display:relative;
+     z-index: 1;
+     height: 200px;
+     width: 100%;
+}
+
 
 
 #footer {
@@ -91,22 +99,27 @@ z-index:1;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-size: 0.75em;
   z-index: 1;
 }
 
 #content_row{
   position: relative;
-  padding: 20px;
   width: 100%;
   height:max-content;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #content{
   display: block;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  position:relative;
+  max-width: 500px;
+  margin: 20px;
   z-index: 1;
 }
 
@@ -114,8 +127,8 @@ z-index:1;
 
 .menu {
   position:absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   float:right;
   max-width: 150px;
   z-index: 20;
