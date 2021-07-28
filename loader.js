@@ -5,7 +5,6 @@ async function preloadContent(url) {
 var menu_location='lander';
 var infected=false;
 var cured=false;
-var is_robot=false;
 async function loadFromMenu(str) {
       //first we blackout by default
       //bgchange('none'); on second thought let's not blackout by default
@@ -25,15 +24,18 @@ async function loadFromMenu(str) {
       }
       else if (str == 'supersecretshit'){
         bgchange('none');
-        if (cured==true){
+        count=0;
+        if (cured==true&&is_robot==true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         }
         else{
-        document.getElementById("content").innerHTML = "One cannot be cured unless they are infected first."
+        document.getElementById("content").innerHTML = "All rules must be followed at the same time."
         }
         menu_location='supersecretshit';
       }
-      else if (str=='about'||str==='questions'||str==='classified'||str==='thanks'||str==='aboutwebsite'){
+      /*I donno what on Earth I was thinking when I wrote This
+      but any additional content needs to be added here*/
+      else if (str=='youwerenew'||str=='music'||str=='humor'||str=='about'||str=='questions'||str=='classified'||str=='thanks'||str=='aboutwebsite'){
         bgchange(str);
         document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
         menu_location='other';
@@ -51,15 +53,4 @@ async function loadFromMenu(str) {
       else{
         console.log("something weird is going on in the load function");
       }
-}
-
-function becomerobot(){
-console.log("user became robot");
-if (is_robot==true){
-  document.getElementById("captcha").innerHTML="You are already classified as a robot.";
-}
-else {
-is_robot=true;
-document.getElementById("captcha").innerHTML="Once a robot, always a robot.";
-}
 }

@@ -10,16 +10,18 @@
   <meta name="author" content="messingsang.dk">
 
 
-  <link rel="stylesheet" href="css.css">
-  <!--preload some weed for later hashtag420 -->
+  <link rel="stylesheet" href="messingsang.css">
+  <!--preload some weed and other backgrounds for later hashtag420 -->
   <link rel="prefetch" href="images/weed.jpg">
   <link rel="prefetch" href="images/weed2.jpg">
+  <link rel="prefetch" href="images/youwerenew.jpg">
 
 <script type="text/javascript" src="loader.js"></script>
 <script type="text/javascript" src="checks.js"></script>
 <script type="text/javascript" src="countdown.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript" src="bghandler.js"></script>
+<script type="text/javascript" src="gamehandler.js"></script>
 </head>
 
 <body id="wholebody" onload="checks()">
@@ -31,9 +33,10 @@
 
 <div class="header">
 
-
-
-
+<div id="statusbox">
+<p id="sslyes1">BIG OMINOUS WARNING IN CAPS: There has not been done an https check. Sound the alarms and queue the synth music!</p>
+<p id="fbannoyance">dummy text for fb clicktracker detection</p>
+</div> <!--out of statusbox-->
 <div class="wholemenu" id="menu">
  <div class="collapser" onclick="toggle_menu_collapse('main');"><div class="buttontext">MENU</div></div>
 
@@ -49,10 +52,10 @@
   </div>
 
   <div class="buttondivs l1" onclick="loadFromMenu('blog');"><div class="buttontext">Blog (n/a)</div></div>
-  <div class="buttondivs l1" onclick="loadFromMenu('music');"><div class="buttontext">Music (n/a)</div></div>
-  <div class="buttondivs l1" onclick="loadFromMenu('intronautics');"><div class="buttontext">Intronautics (n/a)</div></div>
-  <div class="buttondivs l1" onclick="loadFromMenu('humor');"><div class="buttontext">Humor (n/a)</div></div>
-  <div class="buttondivs l1" onclick="loadFromMenu('misc');"><div class="buttontext">Misc.(n/a)</div></div>
+  <div class="buttondivs l1" onclick="loadFromMenu('music');"><div class="buttontext">Music</div></div>
+  <div class="buttondivs l1" onclick="loadFromMenu('youwerenew');"><div class="buttontext">Intronautics</div></div>
+  <div class="buttondivs l1" onclick="loadFromMenu('humor');"><div class="buttontext">Humor</div></div>
+  <div class="buttondivs l1" onclick="loadFromMenu('misc');"><div class="buttontext">Misc. (n/a)</div></div>
   <!-- remember to put a pre-emptive obituary in there
        damn right I'm leaving behind a legacy
      -->
@@ -62,17 +65,14 @@
 </div>
 
 </div> <!--out of whole menu-->
-
-<div id="statusbox">
-<p id="sslyes1">BIG OMINOUS WARNING IN CAPS: There has not been done an https check. Sound the alarms and queue the synth music!</p>
-<p id="fbannoyance">dummy text for fb clicktracker detection</p>
-</div> <!--out of statusbox-->
-
 </div><!--out of header-->
+
+<div class="row">
 
   <div class="column left"></div>
 
-  <div class="column center" id="content">
+  <div class="column center">
+    <div id="content">
     <!-- PAGE CONTENT START -->
 
 
@@ -82,9 +82,13 @@
       getting less and less retro by the minute.
       It's an ongoing project. Pardon the fuck out of me for being slow.</p>
 <p>Also, <strong>If you are under 21 please piss off.</strong> I'm gonna have vulgarity, I'm gonna have
-   weed humor, and I'm gonna have stories about prostitutes on here and I'm not
+   weed humor, I'm gonna have stories about prostitutes,
+   and I'm gonna have art that will creep you the fuck out on here and I'm not
    interested in corrupting your fragile minds while your brains are still plastic.
    Go learn something instead, you won't regret it. I promise.</p>
+
+<p>I suggest running this website in a private window/browser because I do updates
+  all the damn time and it's better if your browser doesn't cache anything.</p>
 <!--
 <p>In this paragraph element you can find <a href="" title="You found a hidden link! What an easter egg!" id="hiddenlink">
   a link hidden</a> within the rest of the text
@@ -93,10 +97,11 @@
 
 
     <!-- PAGE CONTENT END-->
-  </div>
-
-
-
+  </div> <!--out of content-->
+</div><!--out of center column-->
+<div class="column right"> <!--unused-->
+</div>
+</div>
 
 <div class="footer"><a rel="license"
   href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative
@@ -110,6 +115,8 @@
   <a href="https://github.com/messingsang/messingsang.dk">View or download the
     entire history of my website on github</a>
   </div>
+
+
 </div><!--for bgoverlay-->
 </div><!--for everything-->
 
