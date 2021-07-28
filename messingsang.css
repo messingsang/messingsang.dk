@@ -1,8 +1,4 @@
-* {
-
-}
-
-.everything{
+#bgphoto{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -66,153 +62,117 @@ a:active{
   color:#7777ff;
 }
 
-h1{
-  font-size:3em;
+#header{
+  position: relative;
+  max-width: 1000px;
+  height:250px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
 }
-h2{
-  font-size:2em;
-}
-h3{
-  font-size: 1.3em;
-}
-p{
-  font-size:1em;
-}
-
-
 
 #statusbox {
-position:absolute;
-top:0;
-left:0;
+position:relative;
 background-color: #222255;
 text-align: left;
+float: left;
 width:max-content;
+height:max-content;
 max-width: 250px;
 margin-left: 20px;
-margin-right: 20px;
 padding:20px;
 z-index:1;
 }
 
-.column.left{
-display: none;
-float: left;
-width:0px;
-z-index:1;
+
+#footer {
+  position: relative;
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
 
-.column.center {
-  margin-top: 120px;
-padding: 20px;
-width: 100%;
-z-index: 1;
+#content_row{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height:max-content;
+  z-index: 1;
 }
 
 #content{
- display: block;
- margin: auto;
- max-width: 600px;
- padding: 20px;
- z-index: 2;
+  display: block;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
 
-.wholemenu {
+
+
+.menu {
   position:absolute;
-  top: 20px;
-  right: 20px;
-  float: right;
-  width: 150px;
-  padding: 20px;
-  z-index: 5;
+  top: 0;
+  right: 0;
+  float:right;
+  max-width: 150px;
+  z-index: 20;
+  user-select: none;
+
 }
 
-#menucontainer{
-  display: block;
-  width:150px;
-  height:0px;
-  z-index: 5;
-}
 
-.collapser{
-  display: block;
-  float: right;
-  background-color: #444444;
-  border:none;
-  color: #bbbbbb;
-  font-size: 20pt;
+.menu_collapser{
+  position:relative;
   width: 150px;
   height: 70px;
-  user-select: none;
-  z-index: 5;
-}
-.collapser:hover {
-  background-color:#555555;
-  color: #ffffff;
-  z-index: 5;
-}
-
-.buttondivs.l1{
-  display: block;
-  float: right;
-  background-color: #222222;
-  border: none;
-  color: #bbbbbb;
-  font-size: 1em;
-  width: 150px;
-  height: 70px;
-  user-select: none;
-  transition: all 1s; /*short fade because we're super patient*/
-  z-index: 5;
-}
-
-.buttondivs.l1:hover {
-  background-color: #555555;
-  color: #ffffff;
-  z-index: 5;
-}
-.subbuttoncontainer{
-  justify-content: right;
-  z-index: 5;
-}
-
-.buttondivs.l2{
-  display: block;
-  float: right;
-  background-color: #333333;
-  color: #dddddd;
-  border: none;
-  font-size: 1em;
-  width: 100px;
-  height: 50px;
-  user-select: none;
-  transition: all 1s;
-  z-index: 5;
-}
-.buttondivs.l2:hover{
-  background-color: #555555;
-  color: #ffffff;
-  z-index: 5;
-}
-
-.buttontext{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #222222;
+}
+.menu_collapser:hover {
+
+}
+
+
+.menu_buttondivs_l1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   height: 70px;
-  z-index: 6;
+  background-color: #222222;
+  transition: all 1s;
+
 }
 
-.buttontext.subbuttontext{
+.menu_buttondivs_l1:hover {
+
+}
+
+.menu_buttondivs_l2{
+  display: flex;
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
   height: 50px;
-  z-index: 6;
+  background-color: #222222;
+  transition: all 1s;
+}
+.menu_buttondivs_l2:hover{
+
 }
 
-.footer {
-font-size: 0.65em;
-text-align: center;
-margin: auto;
-max-width:470px;
-padding: 20px;
-z-index: 1;
+.buttontext{
+  position:relative;
+  text-align: center;
+}
+
+.subbuttontext{
+  position:relative;
+  text-align: center;
 }

@@ -31,19 +31,19 @@
 
 
 
-<div class="header">
+<div id="header">
 
 <div id="statusbox">
 <p id="sslyes1">BIG OMINOUS WARNING IN CAPS: There has not been done an https check. Sound the alarms and queue the synth music!</p>
 <p id="fbannoyance">dummy text for fb clicktracker detection</p>
 </div> <!--out of statusbox-->
-<div class="wholemenu" id="menu">
+<div id="menu">
  <div class="collapser" onclick="toggle_menu_collapse('main');"><div class="buttontext">MENU</div></div>
 
  <div id="menucontainer">
   <!--this div will eventually become a menu-->
   <center>
-  <div class="buttondivs l1" onclick="toggle_submenu_collapse('about');"><div class="buttontext">About</div></div>
+  <div class="buttondivs l1" onclick="toggle_submenu_collapse();"><div class="buttontext">About</div></div>
   <div class="subbuttoncontainer" id='aboutsubcontainer'>
   <div class="buttondivs l2" onclick="loadFromMenu('about');"><div class="buttontext subbuttontext">About Us</div></div>
   <div class="buttondivs l2" onclick="loadFromMenu('aboutwebsite');"><div class="buttontext subbuttontext">About This Website</div></div>
@@ -67,7 +67,7 @@
 </div> <!--out of whole menu-->
 </div><!--out of header-->
 
-<div class="row">
+<div id="row">
 
   <div class="column left"></div>
 
@@ -99,11 +99,10 @@
     <!-- PAGE CONTENT END-->
   </div> <!--out of content-->
 </div><!--out of center column-->
-<div class="column right"> <!--unused-->
-</div>
+<div class="column right"> <!--unused--></div>
 </div>
 
-<div class="footer"><a rel="license"
+<div id="footer"><a rel="license"
   href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative
   Commons License" style="border-width:0"
   src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br>All pages
