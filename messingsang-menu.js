@@ -71,7 +71,7 @@ async function loadFromMenu(str){
     gamehandler('supersecretshit');
       bgchange('none');
       count=0;
-      if (shitunlocked=true){
+      if (shitunlocked==true){
         document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
         menu_location='supersecretshit';
       }
@@ -83,46 +83,3 @@ async function loadFromMenu(str){
       menu_location=str;
   }
 }
-
-
-
-
-/*
-async function loadFromMenuDeprecated(str) {
-      if (str == 'weed'){
-        bgchange('weed');
-        document.getElementById("content").innerHTML = await preloadContent("content_html/cannabis.html");
-        menu_location='weed';
-        if (infected==true){
-          overlaychange('normal');
-          document.getElementById("statusbox").style["background-color"]="#225522"
-          document.getElementById("sslyes1").innerHTML = "Mary Jane cures all.";
-          cured=true;
-          infected=false;
-        }
-      }
-      else if (str == 'supersecretshit'){
-        bgchange('none');
-        count=0;
-        if (cured==true&&is_robot==true){
-        document.getElementById("content").innerHTML = await preloadContent("content_html/supersecretpasswordentry.html");
-        }
-        else{
-        document.getElementById("content").innerHTML = "All rules must be followed at the same time."
-        }
-        menu_location='supersecretshit';
-      }
-      else if (str=='youwerenew'||str=='music'||str=='humor'||str=='about'||str=='questions'||str=='classified'||str=='thanks'||str=='aboutwebsite'){
-        bgchange(str);
-        document.getElementById("content").innerHTML = await preloadContent("content_html/" + str + ".html");
-        menu_location='other';
-      }
-      else if (str=='ressource'){
-        document.getElementById("content").innerHTML = await preloadContent("content_html/ressource.html");
-
-        menu_location='ressource';
-      }
-      else{
-        console.log("something weird is going on in the load function");
-      }
-}*/
